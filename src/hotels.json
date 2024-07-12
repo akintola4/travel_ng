@@ -1,0 +1,273 @@
+[
+    {
+      "id": 1,
+      "country": "France",
+      "hotel": "Four Seasons Hotel George V",
+      "priceRange": "From around £1,000",
+      "rating": 5,
+      "description": "Located in the heart of Paris, this hotel offers luxurious rooms and suites with stunning views of the Eiffel Tower. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.fourseasons.com/georgev/images/hero-image.jpg"
+    },
+    {
+      "id": 2,
+      "country": "Spain",
+      "hotel": "Hotel Villa Magna",
+      "priceRange": "From around £500",
+      "rating": 4.5,
+      "description": "Situated in the heart of Madrid, this hotel offers elegant rooms and suites with modern amenities. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.villamagna.com/en/images/hero-image.jpg"
+    },
+    {
+      "id": 3,
+      "country": "United States",
+      "hotel": "The Plaza Hotel",
+      "priceRange": "From around £1,000",
+      "rating": 5,
+      "description": "Located in New York City, this iconic hotel offers luxurious rooms and suites with stunning views of Central Park. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.fourseasons.com/plaza/images/hero-image.jpg"
+    },
+    {
+      "id": 4,
+      "country": "China",
+      "hotel": "The Ritz-Carlton, Shanghai",
+      "priceRange": "From around £500",
+      "rating": 4.5,
+      "description": "Located in the heart of Shanghai, this hotel offers luxurious rooms and suites with stunning views of the city. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.ritzcarlton.com/en/hotels/china/shanghai/images/hero-image.jpg"
+    },
+    {
+      "id": 5,
+      "country": "Italy",
+      "hotel": "Hotel de Russie",
+      "priceRange": "From around £1,000",
+      "rating": 5,
+      "description": "Located in Rome, this hotel offers luxurious rooms and suites with stunning views of the city. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.hotelderussie.com/en/images/hero-image.jpg"
+    },
+    {
+      "id": 6,
+      "country": "Turkey",
+      "hotel": "The Ritz-Carlton, Istanbul",
+      "priceRange": "From around £500",
+      "rating": 4.5,
+      "description": "Located in the heart of Istanbul, this hotel offers luxurious rooms and suites with stunning views of the city. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.ritzcarlton.com/en/hotels/turkey/istanbul/images/hero-image.jpg"
+    },
+    {
+      "id": 7,
+      "country": "Mexico",
+      "hotel": "The St. Regis Mexico City",
+      "priceRange": "From around £500",
+      "rating": 4.5,
+      "description": "Located in the heart of Mexico City, this hotel offers luxurious rooms and suites with stunning views of the city. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.stregismexicocity.com/en/images/hero-image.jpg"
+    },
+    {
+      "id": 8,
+      "country": "Thailand",
+      "hotel": "The Siam Hotel",
+      "priceRange": "From around £1,000",
+      "rating": 5,
+      "description": "Located in Bangkok, this hotel offers luxurious rooms and suites with stunning views of the city. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.thesiamhotel.com/en/images/hero-image.jpg"
+    },
+    {
+      "id": 9,
+      "country": "Germany",
+      "hotel": "The Ritz-Carlton, Berlin",
+      "priceRange": "From around £500",
+      "rating": 4.5,
+      "description": "Located in the heart of Berlin, this hotel offers luxurious rooms and suites with stunning views of the city. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.ritzcarlton.com/en/hotels/germany/berlin/images/hero-image.jpg"
+    },
+    {
+      "id": 10,
+      "country": "United Kingdom",
+      "hotel": "The Ritz, London",
+      "priceRange": "From around £1,000",
+      "rating": 5,
+      "description": "Located in the heart of London, this hotel offers luxurious rooms and suites with stunning views of the city. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.theritzlondon.com/en/images/hero-image.jpg"
+    },
+    {
+      "id": 11,
+      "country": "Japan",
+      "hotel": "Aman Tokyo",
+      "priceRange": "From around £1,000",
+      "rating": 5,
+      "description": "Located in the heart of Tokyo, this hotel offers luxurious rooms and suites with stunning views of the city. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.aman.com/resorts/aman-tokyo/images/hero-image.jpg"
+    },
+    {
+      "id": 12,
+      "country": "Canada",
+      "hotel": "Fairmont Pacific Rim",
+      "priceRange": "From around £500",
+      "rating": 4.5,
+      "description": "Located in Vancouver, this hotel offers luxurious rooms and suites with stunning views of the city and the harbor. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.fairmont.com/pacific-rim-vancouver/images/hero-image.jpg"
+    },
+    {
+      "id": 13,
+      "country": "Australia",
+      "hotel": "Park Hyatt Sydney",
+      "priceRange": "From around £1,000",
+      "rating": 5,
+      "description": "Located in Sydney, this hotel offers luxurious rooms and suites with stunning views of the Opera House and the harbor. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.hyatt.com/en-US/hotel/australia/park-hyatt-sydney/sydph/images/hero-image.jpg"
+    },
+    {
+      "id": 14,
+      "country": "Brazil",
+      "hotel": "Copacabana Palace",
+      "priceRange": "From around £500",
+      "rating": 4.5,
+      "description": "Located in Rio de Janeiro, this hotel offers luxurious rooms and suites with stunning views of Copacabana Beach. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.belmond.com/hotels/south-america/brazil/rio-de-janeiro/belmond-copacabana-palace/images/hero-image.jpg"
+    },
+    {
+      "id": 15,
+      "country": "India",
+      "hotel": "Oberoi Udaivilas",
+      "priceRange": "From around £1,000",
+      "rating": 5,
+      "description": "Located in Udaipur, this hotel offers luxurious rooms and suites with stunning views of Lake Pichola. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.oberoihotels.com/hotels-in-udaipur-oberoi-udaivilas/images/hero-image.jpg"
+    },
+    {
+      "id": 16,
+      "country": "Russia",
+      "hotel": "Four Seasons Hotel Moscow",
+      "priceRange": "From around £500",
+      "rating": 4.5,
+      "description": "Located in the heart of Moscow, this hotel offers luxurious rooms and suites with stunning views of the city. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.fourseasons.com/moscow/images/hero-image.jpg"
+    },
+    {
+      "id": 17,
+      "country": "United Arab Emirates",
+      "hotel": "Burj Al Arab",
+      "priceRange": "From around £1,000",
+      "rating": 5,
+      "description": "Located in Dubai, this iconic hotel offers luxurious suites with stunning views of the Arabian Gulf. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.jumeirah.com/en/hotels-resorts/dubai/burj-al-arab/images/hero-image.jpg"
+    },
+    {
+      "id": 18,
+      "country": "Indonesia",
+      "hotel": "Amandari",
+      "priceRange": "From around £1,000",
+      "rating": 5,
+      "description": "Located in Bali, this hotel offers luxurious villas with stunning views of the Ayung River valley. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.aman.com/resorts/amandari/images/hero-image.jpg"
+    },
+    {
+      "id": 19,
+      "country": "South Africa",
+      "hotel": "Singita Lebombo Lodge",
+      "priceRange": "From around £1,000",
+      "rating": 5,
+      "description": "Located in the Kruger National Park, this lodge offers luxurious suites with stunning views of the surrounding wilderness. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.singita.com/wp-content/uploads/2022/07/Singita-Lebombo-Lodge-Exterior-1.jpg"
+    },
+    {
+      "id": 20,
+      "country": "Greece",
+      "hotel": "Katikies Hotel",
+      "priceRange": "From around £500",
+      "rating": 4.5,
+      "description": "Located in Santorini, this hotel offers luxurious suites with stunning views of the Aegean Sea. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.katikieshotels.com/wp-content/uploads/2022/07/Katikies-Hotel-Santorini-Exterior.jpg"
+    },
+    {
+      "id": 21,
+      "country": "Portugal",
+      "hotel": "Quinta da Comporta",
+      "priceRange": "From around £500",
+      "rating": 4.5,
+      "description": "Located in Comporta, this hotel offers luxurious villas and suites with stunning views of the surrounding nature. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.quintadacomporta.com/wp-content/uploads/2022/07/Quinta-da-Comporta-Exterior.jpg"
+    },
+    {
+      "id": 22,
+      "country": "Switzerland",
+      "hotel": "Badrutt's Palace Hotel",
+      "priceRange": "From around £1,000",
+      "rating": 5,
+      "description": "Located in St. Moritz, this hotel offers luxurious rooms and suites with stunning views of the Swiss Alps. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.badruttspalace.com/wp-content/uploads/2022/07/Badrutts-Palace-Hotel-Exterior.jpg"
+    },
+    {
+      "id": 23,
+      "country": "Austria",
+      "hotel": "Schloss Fuschl Resort & Spa",
+      "priceRange": "From around £500",
+      "rating": 4.5,
+      "description": "Located in Salzburg, this hotel offers luxurious rooms and suites with stunning views of the surrounding countryside. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.schlossfuschlresort.com/wp-content/uploads/2022/07/Schloss-Fuschl-Resort-Exterior.jpg"
+    },
+    {
+      "id": 24,
+      "country": "Netherlands",
+      "hotel": "Conservatorium Hotel",
+      "priceRange": "From around £500",
+      "rating": 4.5,
+      "description": "Located in Amsterdam, this hotel offers luxurious rooms and suites with stunning views of the city. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.conservatoriumhotel.com/wp-content/uploads/2022/07/Conservatorium-Hotel-Exterior.jpg"
+    },
+    {
+      "id": 25,
+      "country": "Malaysia",
+      "hotel": "The Datai Langkawi",
+      "priceRange": "From around £1,000",
+      "rating": 5,
+      "description": "Located in Langkawi, this hotel offers luxurious villas and suites with stunning views of the surrounding rainforest and beaches. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.thedatai.com/wp-content/uploads/2022/07/The-Datai-Langkawi-Exterior.jpg"
+    },
+    {
+      "id": 26,
+      "country": "Morocco",
+      "hotel": "La Mamounia",
+      "priceRange": "From around £1,000",
+      "rating": 5,
+      "description": "Located in Marrakech, this hotel offers luxurious rooms and suites with stunning views of the Atlas Mountains. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.mamounia.com/wp-content/uploads/2022/07/La-Mamounia-Marrakech-Exterior.jpg"
+    },
+    {
+      "id": 27,
+      "country": "Egypt",
+      "hotel": "Oberoi Sahl Hasheesh",
+      "priceRange": "From around £500",
+      "rating": 4.5,
+      "description": "Located in Hurghada, this hotel offers luxurious suites and villas with stunning views of the Red Sea. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.oberoihotels.com/hotels-in-hurghada-oberoi-sahl-hasheesh/images/hero-image.jpg"
+    },
+    {
+      "id": 28,
+      "country": "Argentina",
+      "hotel": "Alvear Palace Hotel",
+      "priceRange": "From around £500",
+      "rating": 4.5,
+      "description": "Located in Buenos Aires, this hotel offers luxurious rooms and suites with stunning views of the city. It features a spa, fitness center, and multiple dining options.",
+      "image": "https://www.alvearpalace.com/wp-content/uploads/2022/07/Alvear-Palace-Hotel-Exterior.jpg"
+    },
+    {
+        "id": 29,
+        "country": "Japan",
+        "hotel": "Aman Tokyo",
+        "priceRange": "From around £1,000",
+        "rating": 5,
+        "description": "Located in the heart of Tokyo, this hotel offers luxurious rooms and suites with stunning views of the city. It features a spa, fitness center, and multiple dining options.",
+        "image": "https://www.aman.com/resorts/aman-tokyo/images/hero-image.jpg"
+      },
+      {
+        "id": 20,
+        "country": "Canada",
+        "hotel": "Fairmont Pacific Rim",
+        "priceRange": "From around £500",
+        "rating": 4.5,
+        "description": "Located in Vancouver, this hotel offers luxurious rooms and suites with stunning views of the city and the harbor. It features a spa, fitness center, and multiple dining options.",
+        "image": "https://www.fairmont.com/pacific-rim-vancouver/images/hero-image.jpg"
+      }
+
+]
