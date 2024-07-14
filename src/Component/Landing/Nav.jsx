@@ -15,7 +15,7 @@ import { FaCheck } from "react-icons/fa";
 //we need to import LINk in react-router dom to be ale to use the link tag 
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import DarkSwitcher from "../DarkSwitcher"
+import DarkSwitcher from "./DarkSwitcher"
 
 //switcher for dark mode
 

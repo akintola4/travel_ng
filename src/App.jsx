@@ -1,7 +1,7 @@
 
 import './App.css'
 import 'aos/dist/aos.css';
-import Land from './Component/Land';
+import Land from './Component/Landing/Land';
 
 function App() {
   return (
