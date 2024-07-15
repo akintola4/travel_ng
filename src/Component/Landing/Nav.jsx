@@ -85,10 +85,10 @@ export default function Nav({ setToken }) {
                             href="">Login</Link>
 
 
-                        <button
-                            onClick={handleLogout}
+                        <Link
+                        to="/register"
                             className="p-2 text-md  rounded-md cursor-pointer hover:bg-sky-300 hover:text-white hover:bg-zinic-600 bg-none"
-                        >Sign Up</button>
+                        >Sign Up</Link>
 
                     </ul>
                     <button
