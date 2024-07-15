@@ -1,3 +1,15 @@
+# Traveller Choice website
+##### 
+> At Travellers Choice, we believe that travel has the power to transform lives, broaden horizons, and create lasting memories. Our mission is to make the world accessible to everyone by offering a seamless, personalized travel experience tailored to your unique preferences and budget.
+
+*With a team of passionate travel experts, we curate a diverse selection of destinations, accommodations, and activities to suit every type of traveler. From exotic beach getaways to cultural immersions and outdoor adventures, we'll help you discover the perfect trip for you.*
+
+*Travellers Choice is more than just a booking platform - it's a community of like-minded explorers who share a love for adventure and a thirst for new experiences. Join us as we embark on a journey to unlock the world's wonders, one trip at a time.*
+
+
+
+## Tools used in this site
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
