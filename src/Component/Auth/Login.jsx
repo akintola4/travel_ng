@@ -96,19 +96,19 @@ export default function Login({ setToken }) {
 
           : null}
         {/* react routes will contain all the routes we are going to use */}
-            <main className="flex flex-col gap-5 px-5 mx-auto  xl:px-20  accent-green-950 md:py-20 ">
-                <section className="flex items-center justify-center gap-10 rounded-lg md:justify-normal ">
-                    <div className="flex flex-col gap-5 lg:w-4/12 xl:w-6/12 infomation  ">
+            <main className="flex flex-col gap-5 px-5 mx-auto  pt-20 xl:px-20  accent-green-950 md:py-20 ">
+                <section className="flex flex-row md:flex-col lg:flex-row items-center justify-center gap-10 rounded-lg md:justify-normal ">
+                    <div className="flex flex-col gap-5 md:w-12/12  lg:w-6/12 xl:w-6/12 infomation  shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] p-5 rounded-lg">
                     
-                        <img src="img/logo-black.svg" className="w-6/12 md:p-5" alt="" />
+                        <img src="img/logo-black.svg" className="w-10/12 md:w-10/12 lg:w-6/12 mx-auto" alt="" />
 
-                        <form action="" className="flex flex-col gap-5 w-10/12 md:p-5 "
+                        <form action="" className="flex flex-col w-full gap-5 pt-10 mx-auto lg:mx-0  lg:p-5 "
                             onSubmit={handleSubmit}
                             providers={["google"]}
                         >
                             <h4 className="text-3xl font-bold" >Login</h4>
                           
-                            <p>Login to access your TravellerChoice account</p>
+                            <p>Access your TravellerChoice account</p>
                             <h4 className="flex flex-row gap-5 text-zinc-400">Don't have an account? <Link to="/register" className="relative text-md text-black  w-fit block hover:text-black after:block after:content-[''] after:absolute after:h-[2px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"> Create one</Link></h4>
                             <div className="flex flex-col gap-2">
                                 <label for="Email">Email</label>
@@ -132,7 +132,7 @@ export default function Login({ setToken }) {
                                     placeholder="••••••••" id="password" />
                             </div>
                             <button
-                                className="p-3 text-center text-black bg-white border border-transparent shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-lg hover:border-white hover:bg-sky-300 hover:text-white "
+                                className="p-3 text-center text-black mt-5 md:mt-0 bg-white border border-transparent shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-lg hover:border-transparent hover:bg-sky-300 hover:text-white "
                                 type="submit"
                             >
                                 Login
@@ -168,7 +168,7 @@ export default function Login({ setToken }) {
                             </div>
                         </form>
                     </div>
-                    <div className="hidden w-6/12 title md:block ">
+                    <div className="hidden w-6/12 title lg:block ">
                         <img src="img/login.svg" className="" alt="" />
                     </div>
                     

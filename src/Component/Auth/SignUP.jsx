@@ -59,13 +59,13 @@ return (
     <div>
         <main className="flex flex-col gap-5 px-5 mx-auto my-32 xl:px-60 md:pt-20 accent-green-950 md:my-14">
             <section className="flex items-center justify-center gap-10 rounded-lg md:justify-normal ">
-            <div className="hidden w-6/12 title md:block ">
+            <div className="hidden w-6/12 title lg:block ">
                     <img src="img/register.svg" className="" alt="" />
                 </div>
-                <div className="flex flex-col gap-5 lg:w-4/12 xl:w-6/12 infomation ">
-                    <img src="img/logo-black.svg" className="w-6/12 md:p-5" alt="" />
+                <div className="flex flex-col gap-5 lg:w-6/12 xl:w-6/12 infomation ">
+                    <img src="img/logo-black.svg" className="w-8/12 mx-auto md:p-5" alt="" />
 
-                    <form action="" className="flex flex-col gap-5 md:p-5"
+                    <form action="" className="flex flex-col mx-auto shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-lg gap-5 md:p-5"
                         onSubmit={handleSubmit}
                     >
                         <h4 className="text-3xl font-bold" >Create an account</h4>
@@ -116,7 +116,7 @@ return (
                                 and Privacy Policy </h4>
                         </div>
                         <button
-                            className="p-3 text-center text-black bg-white border border-transparent shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-lg hover:border-white hover:bg-sky-300 hover:text-white "
+                            className="p-3 text-center text-black bg-white border border-transparent shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-lg hover:border-transparent hover:bg-sky-300 hover:text-white "
                             type="submit"
                         >
                             Create an account
