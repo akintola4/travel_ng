@@ -62,10 +62,10 @@ return (
             <div className="hidden w-6/12 title lg:block ">
                     <img src="img/register.svg" className="" alt="" />
                 </div>
-                <div className="flex flex-col gap-5 lg:w-6/12 xl:w-6/12 infomation ">
+                <div className="flex flex-col gap-5 lg:w-6/12 xl:w-6/12 infomation shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] p-5 rounded-lg ">
                     <img src="img/logo-black.svg" className="w-8/12 mx-auto md:p-5" alt="" />
 
-                    <form action="" className="flex flex-col mx-auto shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] rounded-lg gap-5 md:p-5"
+                    <form action="" className="flex flex-col mx-auto  rounded-lg gap-5 md:p-5"
                         onSubmit={handleSubmit}
                     >
                         <h4 className="text-3xl font-bold" >Create an account</h4>

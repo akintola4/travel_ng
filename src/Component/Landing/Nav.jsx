@@ -57,27 +57,29 @@ export default function Nav({ setToken }) {
 
 
                     <li className="relative text-md  w-fit block hover:text-black after:block after:content-[''] after:absolute after:h-[2px] after:bg-sky-300 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left">
-                        <Link to="/ProductList" className="flex flex-row gap-2 items-center">
+                        <Link to="/Trip" className="flex flex-row gap-2 items-center">
                             <IoAirplane /> Find Flight
                         </Link>
                     </li>
 
                     <li className="relative text-md  w-fit block hover:text-black after:block after:content-[''] after:absolute after:h-[2px] after:bg-sky-300 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left">
                         <Link className="flex flex-row gap-2 items-center"
-                            to="/">
+                            to="/hotel">
                             <IoIosBed />
                             Find Stays
                         </Link></li>
                 </ul>
                 <div className="flex flex-row items-center gap-2 mx md:w-3/12">
-                    <img src="img/logo-black.svg" className="w-6/12 md:w-8/12" alt="" />
+                    <Link to="/" >
+                        <img src="img/logo-black.svg" className="w-6/12 md:w-8/12" alt="" />
+                    </Link>
                 </div>
                 <div className="nav-3 ">
                     <ul className=" flex-row hidden lg:flex items-center gap-2">
 
                         <DarkSwitcher />
 
-                       
+
 
                         <Link
                             to="/Login"
@@ -86,7 +88,7 @@ export default function Nav({ setToken }) {
 
 
                         <Link
-                        to="/register"
+                            to="/register"
                             className="p-2 text-md  rounded-md cursor-pointer hover:bg-sky-300 hover:text-white hover:bg-zinic-600 bg-none"
                         >Sign Up</Link>
 
@@ -99,17 +101,29 @@ export default function Nav({ setToken }) {
             </nav>
             <div className={`lg:hidden mobile-menu ${isOpen ? "" : "hidden "}`}>
                 <ul className="gap-20 mx-auto">
-                    <li className="px-5 py-2 transition duration-300 "><Link to={"/"}>Home</Link></li>
-                    <DarkSwitcher />
-                    <li className="px-5 py-2 transition duration-300 "><Link to="/ProductList">Shop</Link></li>
-                    <li className="px-5 py-2 transition duration-300 "><Link
+                    <li className="px-5 py-2 transition duration-300 dark:text-white "><Link to={"/"}>Home</Link></li>
+                    <li className="px-5 py-2 transition duration-300 dark:text-white">
+                        <Link to="/Trip" className="flex flex-row gap-2 items-center">
+                         Find Flight
+                        </Link>
+                    </li>
+
+                    <li className="px-5 py-2 transition duration-300 dark:text-white">
+                        <Link className="flex flex-row gap-2 items-center"
+                            to="/hotel">
+                            Find Stays
+                        </Link></li>
+                    <li className="px-5 py-2 transition duration-300 dark:text-white ">  <DarkSwitcher /> Theme</li>
+
+                    <li className="px-5 py-2 transition duration-300 dark:text-white "><Link
                         to="/Login"
-                        className="p-2 text-md text-black rounded-md cursor-pointer hover:bg-sky-300 hover:text-white hover:bg-zinic-600 bg-none"
+                        className=""
                         href="">Login</Link></li>
-                    <li className="px-5 py-2 transition duration-300 "> <button
+                    <li className="px-5 py-2 transition duration-300 dark:text-white "> <Link
                         onClick={handleLogout}
-                        className="p-2 text-md text-black rounded-md cursor-pointer hover:bg-sky-300 hover:text-white hover:bg-zinic-600 bg-none"
-                    >Sign Up</button></li>
+                        to="/Register"
+                        className=""
+                    >Sign Up</Link></li>
 
 
 

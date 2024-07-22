@@ -2,24 +2,28 @@ export default[
     {
         id:1,
         city:"Istanbul",
+        price:400,
         country:"Turkey",
         img:"istanbul.svg"
     },
     {
         id:2,
         city:"Sydney",
+        price:900,
         country:"Australia",
         img:"sydney.svg"
     },
     {
         id:3,
         city:"Baku",
+        price:500,
         country:"Azerbaijan",
         img:"baku.svg"
     },
     {
         id:4,
         city:"Malé",
+        price:600,
         country:"Maldives",
         img:"male.svg"
     },
@@ -27,18 +31,21 @@ export default[
     {
         id:5,
         city:"Paris",
+        price:800,
         country:"France",
         img:"paris.svg"
     },
     {
         id:6,
         city:"NewYork",
+        price:400,
         country:"USA",
         img:"newyork.svg"
     },
     {
         id:7,
         city:"London",
+        price:250,
         country:"UK",
         img:"london.svg"
     },
@@ -46,12 +53,14 @@ export default[
     {
         id:8,
         city:"Tokyo",
+        price:450,
         country:"Japan",
         img:"tokyo.svg"
     },
     {
         id:9,
         city:"Dubai",
+        price:550,
         country:"UAE",
         img:"dubai.svg"
     },
