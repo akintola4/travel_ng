@@ -231,6 +231,7 @@ export default function Land() {
           {review}
         </div> */}
       </section>
+      
       <ReviewSwiper />
 
     <Footer />

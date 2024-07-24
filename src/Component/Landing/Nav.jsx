@@ -71,7 +71,9 @@ export default function Nav({ setToken }) {
                 </ul>
                 <div className="flex flex-row items-center gap-2 mx md:w-3/12">
                     <Link to="/" >
-                        <img src="img/logo-black.svg" className="w-6/12 md:w-8/12" alt="" />
+
+                        <img src="img/logo-black.svg" className="w-6/12 block dark:hidden md:w-8/12" alt="" />
+                        <img src="img/logo-blue.svg" className="w-6/12 hidden dark:block md:w-8/12" alt="" />
                     </Link>
                 </div>
                 <div className="nav-3 ">

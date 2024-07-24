@@ -11,7 +11,7 @@ export default function Footer() {
                     <p className=" mb-2  text-transparent">Relative parent</p>
 
                     <div className="flex gap-4 bg-sky-400 dark:bg-gray-800 w-full">
-                        <div className="flex flex-row absolute top-0 items-center justify-between gap-10 p-5 mx-5  dark:bg-sky-900  bg-sky-300 md:mx-10 lg:mx-40 xl:mx-60 rounded-2xl md:flex-row md:p-10 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px]" data-aos="zoom-in-up">
+                        <div className="flex flex-row absolute top-0 items-center justify-between gap-10 p-5 mx-5  dark:bg-sky-900  bg-sky-300 md:mx-10 lg:mx-40 xl:mx-60 rounded-2xl md:flex-row md:p-10 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px]" >
                             <div className="flex flex-col gap-4">
                                 <h4 className="font-medium text-1xl md:text-4xl ">Subscribe Newsletter</h4>
                                 <p className="text-md font-light">The Travel
@@ -32,7 +32,8 @@ export default function Footer() {
                         <div className=" px-5  lg:px-16 pt-32 lg:pt-40 xl:pt-60">
                             <div className="flex flex-col gap-10 lg:gap-20  lg:flex-row ">
                                 <div className="flex flex-col items-center lg:items-start gap-5 p-2 xl:p-10 lg:w-4/12" >
-                                    <img src="img/logo-light.svg" alt="" />
+                                <img src="img/logo-black.svg" className="w-10/12 block dark:hidden " alt="" />
+                                <img src="img/logo-blue.svg" className=" hidden dark:block 2" alt="" />
                                     <p>Unlock a world of unforgettable experiences with Travellers Choice, your trusted partner in crafting dream vacations.</p>
                                     <div className="flex gap-5 flex-row">
                                         <button className="text-2xl"><FaXTwitter /></button>
