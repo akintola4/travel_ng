@@ -91,7 +91,7 @@ export default function TripLanding() {
                                 </div>
 
                                 <div className='flex flex-row-reverse gap-5 cursor-pointer'>
-                                    <Link to="/tripListing" className='bg-sky-300 p-2.5 text-sm lg:text-md text-white hover:border-2 hover:border-sky-300 hover:bg-transparent border-2'>Show Filghts</Link>
+                                    <Link to="/flightListing" className='bg-sky-300 p-2.5 text-sm lg:text-md text-white hover:border-2 hover:border-sky-300 hover:bg-transparent border-2'>Show Filghts</Link>
                                     <button className='hover:bg-sky-300 p-2.5 text-sm lg:text-md hover:text-white border-2 border-sky-300' >Add Promo Code</button>
 
                                 </div>

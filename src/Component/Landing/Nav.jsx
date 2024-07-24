@@ -57,7 +57,7 @@ export default function Nav({ setToken }) {
 
 
                     <li className="relative text-md  w-fit block hover:text-black after:block after:content-[''] after:absolute after:h-[2px] after:bg-sky-300 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left">
-                        <Link to="/Trip" className="flex flex-row gap-2 items-center">
+                        <Link to="/flight" className="flex flex-row gap-2 items-center">
                             <IoAirplane /> Find Flight
                         </Link>
                     </li>

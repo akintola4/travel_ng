@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 export default function TripCard(props) {
@@ -37,9 +38,9 @@ export default function TripCard(props) {
                                 </p></label>
                         </div>
                     </div>
-                    <button className='flex  py-5 rounded-lg  flex-row items-center justify-center  gap-5 bg-sky-300 dark:bg-sky-900 dark:hover:bg-transparent dark:hover:border-sky-900 hover:bg-transparent hover:border-2 hover:border-sky-300 dark:border-sky-900  border-sky-300 border-2 text-center'>
+                    <Link to="/flightDetail" className='flex  py-5 rounded-lg  flex-row items-center justify-center  gap-5 bg-sky-300 dark:bg-sky-900 dark:hover:bg-transparent dark:hover:border-sky-900 hover:bg-transparent hover:border-2 hover:border-sky-300 dark:border-sky-900  border-sky-300 border-2 text-center'>
                     View Deals
-                </button>
+                </Link>
                 </div>
             </div>
         </div>
