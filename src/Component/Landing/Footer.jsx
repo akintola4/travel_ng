@@ -26,14 +26,14 @@ export default function Footer() {
 
 
                             <div className=" flex-col gap-3 hidden md:flex lg:w-4/12">
-                                <img src="img/sub.svg" alt="" />
+                                <img src="/img/sub.svg" alt="" />
                             </div>
                         </div>
                         <div className=" px-5  lg:px-16 pt-32 lg:pt-40 xl:pt-60">
                             <div className="flex flex-col gap-10 lg:gap-20  lg:flex-row ">
                                 <div className="flex flex-col items-center lg:items-start gap-5 p-2 xl:p-10 lg:w-4/12" >
-                                <img src="img/logo-black.svg" className="w-10/12 block dark:hidden " alt="" />
-                                <img src="img/logo-blue.svg" className=" hidden dark:block 2" alt="" />
+                                <img src="/img/logo-black.svg" className="w-10/12 block dark:hidden " alt="" />
+                                <img src="/img/logo-blue.svg" className=" hidden dark:block 2" alt="" />
                                     <p>Unlock a world of unforgettable experiences with Travellers Choice, your trusted partner in crafting dream vacations.</p>
                                     <div className="flex gap-5 flex-row">
                                         <button className="text-2xl"><FaXTwitter /></button>
