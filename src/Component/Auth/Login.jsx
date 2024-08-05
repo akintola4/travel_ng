@@ -1,13 +1,31 @@
-import { FaGoogle } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
-import { Link, Navigate } from "react-router-dom";
+
+import { Link } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
-import DarkSwitcher from "../Landing/DarkSwitcher"
+
+import {Icon} from 'react-icons-kit';
+import {eyeOff} from 'react-icons-kit/feather/eyeOff';
+import {eye} from 'react-icons-kit/feather/eye'
+import { supabase } from '../supabase-context/client'
 
 import { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
-export default function Login({ setToken }) {
+export default function Login({logged}) {
+
+
+    const [type, setType] = useState('password');
+    const [icon, setIcon] = useState(eyeOff);
+
+    const handleToggle = () => {
+        if (type==='password'){
+           setIcon(eye);
+           setType('text')
+        } else {
+           setIcon(eyeOff)
+           setType('password')
+        }
+     }
+
     const [showModal, setShowModal] = useState();
     const navigate = useNavigate()
     const [formData, setFormData] = useState(
@@ -30,24 +48,17 @@ export default function Login({ setToken }) {
                 email: formData.email,
                 password: formData.password,
             })
-            console.log(data)
-            setToken(data)
-            if (data.user) {
+            if (logged == true) {
                 navigate('/Profile')
             }
-            else if (data.user == null) {
+            else if (logged == null) {
                 setShowModal(true)
             }
         } catch (error) {
-            alert(error)
+            console.log(error.message)
         }
     }
-    function withGoogle() {
-        supabase.auth.signInWithOAuth({
-            provider: 'google',
-        })
-
-    }
+    // console.log(logged,"in login")
     return (
         <div className="dark:text-white dark:bg-gray-900 h-full">
               {showModal ?
@@ -58,9 +69,9 @@ export default function Login({ setToken }) {
                                     <div className="relative my-6">
                                         <div className="relative flex flex-col w-full p-5 bg-white border-0 shadow-lg outline-none rounded-xl focus:outline-none">
                                             <div
-                                                class="flex flex-shrink-0 items-center justify-between rounded-t-md bg-info-600 gap-20 p-4 dark:border-b dark:border-neutral-500 dark:bg-transparent">
+                                                className="flex flex-shrink-0 items-center justify-between rounded-t-md bg-info-600 gap-20 p-4 dark:border-b dark:border-neutral-500 dark:bg-transparent">
                                                 <h5
-                                                    class="text-sm md:text-xl font-medium leading-normal "
+                                                    className="text-sm md:text-xl font-medium leading-normal "
                                                     id="rightTopModalLabel">
                                                    Login status
                                                 </h5>
@@ -104,14 +115,13 @@ export default function Login({ setToken }) {
 
                         <form action="" className="flex flex-col w-full gap-5 pt-10 mx-auto lg:mx-0  lg:p-5 "
                             onSubmit={handleSubmit}
-                            providers={["google"]}
                         >
                             <h4 className="text-3xl font-bold" >Login</h4>
                           
                             <p>Access your TravellerChoice account</p>
-                            <h4 className="flex flex-row gap-5 text-zinc-400">Don't have an account? <Link to="/register" className="relative text-md text-black  w-fit block hover:text-black after:block after:content-[''] after:absolute after:h-[2px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"> Create one</Link></h4>
+                            <h4 className="flex flex-row gap-5 text-zinc-400">Dont have an account? <Link to="/register" className="relative text-md text-black  w-fit block hover:text-black after:block after:content-[''] after:absolute after:h-[2px] after:bg-black after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"> Create one</Link></h4>
                             <div className="flex flex-col gap-2">
-                                <label for="Email">Email</label>
+                                <label htmlFor="Email">Email</label>
                                 <input
                                     type="email"
                                     name="email"
@@ -122,9 +132,12 @@ export default function Login({ setToken }) {
                                     id="email" />
                             </div>
                             <div className="flex flex-col gap-2 ">
-                                <label for="Password">Password</label>
+                            <div className="flex justify-between flex-row">
+                                <label htmlFor="Password">Password</label>
+                                <Icon className=" " icon={icon} size={25} onClick={handleToggle}/>
+                                </div>
                                 <input
-                                    type="password"
+                                    type={type}
                                     className="p-3 border-2 rounded-lg shadow-sm text-green-950 focus:outline-none border-zinc-200 focus:ring-black focus:ring-2 placeholder:text-green-950 "
                                     name="password"
                                     onChange={handleChange}
@@ -156,7 +169,7 @@ export default function Login({ setToken }) {
                                 ></div>
 
                                 <div
-                                    class="g_id_signin"
+                                    className="g_id_signin"
                                     data-type="standard"
                                     data-shape="pill"
                                     data-theme="outline"

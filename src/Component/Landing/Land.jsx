@@ -9,6 +9,8 @@ import Review from './Review';
 import reviews from '../../review';
 import ReviewSwiper from './ReviewSlider';
 import Footer from './Footer';
+import { useEffect, useState } from 'react';
+import { supabase } from '../supabase-context/client';
 export default function Land() {
 
   const card = location.map((info) => {
@@ -39,10 +41,33 @@ export default function Land() {
       rating={info.stats.rating}
     />
   })
+
+  const [token, setToken] = useState(false)
+
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchSession = async () => {
+      try {
+        const { data: sessionData } = await supabase.auth.getSession();
+        if (sessionData.session !== null) {
+          setToken(true)
+        }if(sessionData.session == null){
+          setToken(false)
+        }
+        
+      } catch (err) {
+        setError(err);
+      }
+    };
+
+    fetchSession();
+  }, []);
+
   return (
 
     <div className='bg-white flex flex-col gap-10 dark:text-white dark:bg-gray-900'>
-      <Nav />
+      <Nav token={token} />
 
 
       <section className="relative mt-10 xl:pt-28 h-full">

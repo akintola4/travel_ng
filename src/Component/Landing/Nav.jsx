@@ -4,9 +4,9 @@ import { RxHamburgerMenu } from "react-icons/rx";
 // import { IoIosArrowDown } from "react-icons/io";
 
 import { IoIosBed } from "react-icons/io";
-import { IoAirplane } from "react-icons/io5";
+import { IoAirplane, IoHeart } from "react-icons/io5";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import DarkModeToggle from './DarkModeToggle';
 
 // import { supabase } from './supabase-context/client'
@@ -16,13 +16,45 @@ import { FaCheck } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import DarkSwitcher from "./DarkSwitcher"
+import { supabase } from "../supabase-context/client";
+import { RiLogoutCircleRLine } from "react-icons/ri";
+import NavAvatar from "../Profile/NavAvatar"
 
 //switcher for dark mode
 
 
-export default function Nav({ setToken }) {
+export default function Nav() {
     // now we create a toogle menu for the navabr 
     const [showModal, setShowModal] = useState();
+
+
+    const [Logged, setLogged] = useState(false)
+
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchSession = async () => {
+            try {
+                const { data: sessionData } = await supabase.auth.getSession();
+                if (sessionData.session !== null) {
+                    setLogged(true)
+                } if (sessionData.session == null) {
+                    setLogged(false)
+                }
+
+            } catch (err) {
+                setError(err);
+            }
+        };
+
+        fetchSession();
+    }, []);
+
+
+
+    console.log(Logged, "this prove we logged in for nav")
+
+
     const [isOpen, setIsOpen] = useState(false)
     const toggleMenu = () => {
         setIsOpen(!isOpen)
@@ -38,7 +70,6 @@ export default function Nav({ setToken }) {
             // Redirect to login page or perform other actions after sign-out
 
             setShowModal(true)
-            setToken(null)
             navigate('/Login')
         } catch (error) {
             console.error('Error signing out:', error.message);
@@ -46,14 +77,30 @@ export default function Nav({ setToken }) {
         }
     }
 
+    const [fullName, setFullname] = useState('')
+    const [email, setEmail] = useState('')
+    useEffect(() => {
+        const getUsername = async () => {
+            const { data: { user } } = await supabase.auth.getUser()
+            const fullname = `${user.user_metadata.first_name} ${user.user_metadata.last_name}`
+            const email = user.email
+            setFullname(fullname)
+            setEmail(email)
+        }
+        getUsername();
+    }
+        , [])
+
+    console.log(fullName, email)
+
     return (
         <><header className="fixed inset-x-0 top-0 z-10 bg-gray-400 text-black dark:text-white rounded-md md:px-10 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 w-12/12">
 
-            <nav className="flex items-center justify-between p-4" aria-label="Global">
+            <nav className="flex items-center p-4" aria-label="Global">
 
 
 
-                <ul className="flex flex-row items-center hidden gap-10 lg:flex">
+                <ul className=" flex-row items-center hidden gap-5  lg:flex w-4/12">
 
 
                     <li className="relative text-md  w-fit block hover:text-black after:block after:content-[''] after:absolute after:h-[2px] after:bg-sky-300 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left">
@@ -69,31 +116,52 @@ export default function Nav({ setToken }) {
                             Find Stays
                         </Link></li>
                 </ul>
-                <div className="flex flex-row items-center gap-2 mx md:w-3/12">
-                    <Link to="/" >
+                <Link to="/" className="flex flex-row lg:items-center lg:justify-center gap-2 lg:w-6/12">
 
-                        <img src="/img/logo-black.svg" className="w-6/12 block dark:hidden md:w-8/12" alt="" />
-                        <img src="/img/logo-blue.svg" className="w-6/12 hidden dark:block md:w-8/12" alt="" />
-                    </Link>
-                </div>
-                <div className="nav-3 ">
-                    <ul className=" flex-row hidden lg:flex items-center gap-2">
-
+                    <img src="/img/logo-black.svg" className="w-6/12 block dark:hidden md:w-6/12" alt="" />
+                    <img src="/img/logo-blue.svg" className="w-6/12 hidden dark:block md:w-6/12" alt="" />
+                </Link>
+                <div className="nav-3 w-4/12 justify-end">
+                    <ul className=" flex-row hidden gap-2 lg:flex items-center ">
                         <DarkSwitcher />
+                        {
+                            Logged ? (
+                                <><div className="flex flex-row gap-4">
+
+                                    <div className="flex gap-4 items-center flex-row">
+                                        <Link to='/profile' className="flex flex-row items-center justify-center gap-4">
+                                            {/* <img src="/img/ppf.svg" className="rounded-full w-2/12" alt="" /> */}
+                                            <NavAvatar />
+                                            <div className="flex flex-col ">
+                                                <h4 className="text-mdd font-medium"> {fullName}</h4>
+                                                <p className="text-sm font-light"> {email}</p>
+                                            </div>
+
+                                        </Link>
+
+                                        <button
+                                            onClick={handleLogout}
+                                            className="p-2 text-2xl text-black rounded-md cursor-pointer hover:bg-black hover:text-white hover:bg-zinic-600 bg-none"
+                                        >
+                                            <RiLogoutCircleRLine className="dark:hidden block" />
+                                            <RiLogoutCircleRLine className="dark:block hidden text-sky-50" />
+                                        </button>
+                                    </div>
+                                </div>
+                                </>
 
 
+                            ) : (
 
-                        <Link
-                            to="/Login"
-                            className="p-2 text-md  rounded-md cursor-pointer hover:bg-sky-300 hover:text-white hover:bg-zinic-600 bg-none"
-                            href="">Login</Link>
-
-
-                        <Link
-                            to="/register"
-                            className="p-2 text-md  rounded-md cursor-pointer hover:bg-sky-300 hover:text-white hover:bg-zinic-600 bg-none"
-                        >Sign Up</Link>
-
+                                <><Link
+                                    to="/Login"
+                                    className="p-2 text-md  rounded-md cursor-pointer hover:bg-sky-300 hover:text-white hover:bg-zinic-600 bg-none"
+                                    href="">Login</Link><Link
+                                        to="/register"
+                                        className="p-2 text-md  rounded-md cursor-pointer hover:bg-sky-300 hover:text-white hover:bg-zinic-600 bg-none"
+                                    >Sign Up</Link></>
+                            )
+                        }
                     </ul>
                     <button
                         className="flex p-2 rounded-md outline-none cursor-pointer mobile-menu-button lg:hidden hover:bg-none hover:text-black" onClick={toggleMenu}>
@@ -106,7 +174,7 @@ export default function Nav({ setToken }) {
                     <li className="px-5 py-2 transition duration-300 dark:text-white "><Link to={"/"}>Home</Link></li>
                     <li className="px-5 py-2 transition duration-300 dark:text-white">
                         <Link to="/Trip" className="flex flex-row gap-2 items-center">
-                         Find Flight
+                            Find Flight
                         </Link>
                     </li>
 
@@ -115,7 +183,10 @@ export default function Nav({ setToken }) {
                             to="/hotel">
                             Find Stays
                         </Link></li>
-                    <li className="px-5 py-2 transition duration-300 dark:text-white ">  <DarkSwitcher /> Theme</li>
+                         
+                         <li className="px-5 py-2 transition duration-300 dark:text-white ">  <Link to='/profile'>Profile</Link>  </li>
+
+                    <li className="px-5 py-2 transition duration-300 flex flex-row items-center dark:text-white ">  <DarkSwitcher /> Theme</li>
 
                     <li className="px-5 py-2 transition duration-300 dark:text-white "><Link
                         to="/Login"
